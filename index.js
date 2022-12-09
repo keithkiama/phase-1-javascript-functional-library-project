@@ -77,50 +77,57 @@ function myFilter(collection, predicate) {
     return newCollection
   }
   
-  function mySize(collection) {
+function mySize(collection) {
     let currentCollection = [...collection]
-    if (collection instanceof Array === false) {
-      currentCollection = Object.values(collection)
-    }
-    return currentCollection.length
+        if (collection instanceof Array === false) {
+        currentCollection = Object.values(collection)
+        }
+         return currentCollection.length
   }
   
   function myFirst(array, n) {
     if (typeof n !== "number") {
       return array[0]
-    } else {
+    } 
+
+    else {
       let newArray = []
-      for (let i = 0; i < n; i++){
-        newArray.push(array[i])
-      }
-      return newArray
+        for (let i = 0; i < n; i++){
+            newArray.push(array[i])
+        }
+            return newArray
     }
   }
   
-  function myLast(array, n) {
+function myLast(array, n) {
     if (typeof n !== "number") {
       return array[array.length - 1]
-    } else {
+    } 
+
+    else {
       let newArray = []
-      for (let i = 1; i <= n; i++) {
-        newArray.unshift(array[array.length-i])
-      }
-      return newArray
+        for (let i = 1; i <= n; i++) {
+            newArray.unshift(array[array.length-i])
+        }
+
+        return newArray
     }
   }
   
-  function myKeys (object) {
+function myKeys (object) {
     const arrayOfKeys = []
-    for (let key in object) {
-      arrayOfKeys.push(key)
-    }
-    return arrayOfKeys
+        for (let key in object) {
+        arrayOfKeys.push(key)
+        }
+
+        return arrayOfKeys
   }
   
-  function myValues (object) {
+function myValues (object) {
     const arrayOfValues = []
-    for (let key in object) {
-      arrayOfValues.push(object[key])
-    }
-    return arrayOfValues
+        for (let key in object) {
+        arrayOfValues.push(object[key])
+        }
+
+        return arrayOfValues
   }
